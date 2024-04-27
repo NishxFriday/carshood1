@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import { CustomButton } from "@components";
 
 const Hero = () => {
@@ -11,6 +10,13 @@ const Hero = () => {
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleWhatsappChat = () => {
+    window.open(
+      "https://wa.me/918068783038?text=Chat%20with%20Master%20Car%20Advisor",
+      "_blank"
+    );
   };
 
   return (
@@ -29,6 +35,13 @@ const Hero = () => {
           title="Explore Cars"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={handleScroll}
+        />
+        
+        {/* WhatsApp Button */}
+        <CustomButton
+          title="Chat with Us"
+          containerStyles="bg-green-500 text-white rounded-full mt-4"
+          handleClick={handleWhatsappChat}
         />
       </div>
       <div className="hero__image-container">
